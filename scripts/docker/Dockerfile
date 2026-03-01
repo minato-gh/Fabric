@@ -28,4 +28,4 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
 
 ENTRYPOINT ["fabric"]
 
-CMD ["--serve", "--address", "0.0.0.0:8080"]
+CMD ["--serve"]
