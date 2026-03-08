@@ -14,7 +14,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o /fabric ./cmd/fabric
 FROM alpine:latest
 
 RUN apk add --no-cache ca-certificates yt-dlp \
-    && mkdir -p /root/.config/fabric
+    && mkdir -p /home/appuser/.config/fabric
 
 COPY --from=builder /fabric /usr/local/bin/fabric
 
